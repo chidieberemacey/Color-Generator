@@ -1,0 +1,160 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Fira Sans',sans-serif;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+:root{
+  --primary: #D81E5D;
+  --secondary: #8A4fff;
+  --light: #eee;
+  --grey: rgb(122, 122, 122);
+  --dark: #1e2f42;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+body{
+  background: var(--light);
+}
+
+main{
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1{
+  color: var(--dark);
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+p{
+  color: var(--grey);
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+button, input{
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  color: inherit;
+}
+
+button{
+  cursor: pointer;
+}
+
+.generator-button{
+  color: var(--primary);
+  font-size: inherit;
+  font-weight: 700;
+  background: linear-gradient(to bottom right,var(--primary),var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.4s ease ease-out;
+}
+
+.generator-button:hover{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+h4{
+  color: var(--grey);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.colours{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+}
+
+.colour{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: #fff;
+  background-color: var(--dark);
+  transition: 0.4s ease-out;
+  border: 2px solid transparent;
+}
+
+.colour.copied{
+  border-color: red;
+}
+
+.lock-toggle{
+  opacity: 0.5;
+  transition: 0.4s;
+  width: 1.4em;
+}
+
+.lock-toggle.is-locked{
+  opacity: 1;
+}
+
+.colour-input{
+  text-align: center;
+}
+
+/*************  MEDIA QUERIES  *****************/
+
+
+@media (min-width: 768px){
+  h1{
+    font-size: 3rem;
+  }
+  .colours{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px){
+  .colours{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .colour{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .colour-input{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 300px){
+  html{
+    font-size: 12px;
+  }
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
