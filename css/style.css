@@ -31,9 +31,21 @@ body{
 }
 
 main{
-  padding: 4rem 2rem;
+  padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+h2{
+  margin-bottom: 4rem;
+  color: #E79A08;
+}
+.stroke{
+  color: #52DB5C;
+}
+
+h2 span{
+  color: #211D2E;
 }
 
 h1{
